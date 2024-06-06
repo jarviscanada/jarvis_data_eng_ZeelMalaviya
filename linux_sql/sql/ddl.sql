@@ -1,7 +1,6 @@
--- Switch to host_agent database
+
 \c host_agent
 
--- Create host_info table if not exists
 CREATE TABLE IF NOT EXISTS host_info (
     id SERIAL PRIMARY KEY,
     hostname VARCHAR(255) NOT NULL,
@@ -14,7 +13,6 @@ CREATE TABLE IF NOT EXISTS host_info (
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Create host_usage table if not exists
 CREATE TABLE IF NOT EXISTS host_usage (
     id SERIAL PRIMARY KEY,
     timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
